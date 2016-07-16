@@ -2,6 +2,10 @@
 // Date calculation for bank holidays by Scott Pritchard
 
 function calculateBankHolidays(theYear){
+	var _currDate	= new Date();
+	if (!theYear || theYear != ""){
+		theYear = _currDate.getYear();
+	}
 	function padout(number) { return (number < 10) ? '0' + number : number; }
 	var Easter = function(Y) {
 		var C = Math.floor(Y/100);
