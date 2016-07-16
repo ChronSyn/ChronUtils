@@ -64,7 +64,7 @@ function calculateBankHolidays(theYear){
 		srDate.setYear(theYear);
 		srDate.setDate(1);
 		srDate.setMonth(8);
-			
+		srDate.setDate(srDate.getDate()-1); // In case 1st Sept falls on Monday
 		while (srDate.getDay() != mondayDoW){	
 			srDate.setDate(srDate.getDate() -1);
 		}
