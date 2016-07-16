@@ -4,7 +4,7 @@
 function calculateBankHolidays(theYear){
 	var _currDate	= new Date();
 	if (!theYear || theYear != ""){
-		theYear = _currDate.getYear();
+		theYear = _currDate.getFullYear();
 	}
 	function padout(number) { return (number < 10) ? '0' + number : number; }
 	var Easter = function(Y) {
