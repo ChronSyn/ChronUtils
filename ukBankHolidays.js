@@ -1,7 +1,7 @@
 // Easter function care of Gavin Gilmour (http://stackoverflow.com/questions/1284314/easter-date-in-javascript)
 // Date calculation for bank holidays by Scott Pritchard
 
-function calculateBankHolidays(theYear){
+function calculateBankHolidays(theYear, toStr){
 	var _currDate	= new Date();
 	if (!theYear || theYear != ""){
 		theYear = _currDate.getFullYear();
@@ -39,8 +39,8 @@ function calculateBankHolidays(theYear){
 		while (srDate.getDay() != mondayDoW){	
 			srDate.setDate(srDate.getDate() -1);
 		}
-		var srDateStr	=	srDate.toString();
-		return srDateStr;
+		if (toStr){ return srDate.toString();};
+		return srDate;
 	};
 	
 	var mayDay	=	function(){
@@ -53,8 +53,8 @@ function calculateBankHolidays(theYear){
 		while (srDate.getDay() != mondayDoW){	
 			srDate.setDate(srDate.getDate() +1);
 		}
-		var srDateStr	=	srDate.toString();
-		return srDateStr;
+		if (toStr){ return srDate.toString();};
+		return srDate;
 	}
 	
 	var augustBank	=	function(){
@@ -68,8 +68,8 @@ function calculateBankHolidays(theYear){
 		while (srDate.getDay() != mondayDoW){	
 			srDate.setDate(srDate.getDate() -1);
 		}
-		var srDateStr	=	srDate.toString();
-		return srDateStr;
+		if (toStr){ return srDate.toString();};
+		return srDate;
 	}
 	
 	var easterMonday	=	function(){
@@ -83,8 +83,8 @@ function calculateBankHolidays(theYear){
 			srDate.setDate(srDate.getDate() -1);
 		}
 		srDate.setDate(srDate.getDate() +3); // Add 3 days for Easter Monday (follows Good Friday)
-		var srDateStr	=	srDate.toString();
-		return srDateStr;
+		if (toStr){ return srDate.toString();};
+		return srDate;
 	}
 	
 	var goodFriday	=	function(){
@@ -98,8 +98,8 @@ function calculateBankHolidays(theYear){
 		while (srDate.getDay() != fridayDoW){	
 			srDate.setDate(srDate.getDate() -1);
 		}
-		var srDateStr	=	srDate.toString();
-		return srDateStr;
+		if (toStr){ return srDate.toString();};
+		return srDate;
 	}
 	
 	var christmasDay	=	function(){
@@ -107,8 +107,8 @@ function calculateBankHolidays(theYear){
 		srDate.setYear(theYear);
 		srDate.setDate(25);
 		srDate.setMonth(11);
-		var srDateStr	=	srDate.toString();
-		return srDateStr;
+		if (toStr){ return srDate.toString();};
+		return srDate;
 	}
 	
 	var boxingDay	=	function(){
@@ -116,8 +116,8 @@ function calculateBankHolidays(theYear){
 		srDate.setYear(theYear);
 		srDate.setDate(26);
 		srDate.setMonth(11);
-		var srDateStr	=	srDate.toString();
-		return srDateStr;
+		if (toStr){ return srDate.toString();};
+		return srDate;
 	}
 	
 	var newYearsDay = function(){
@@ -125,8 +125,8 @@ function calculateBankHolidays(theYear){
 		srDate.setYear(theYear);
 		srDate.setDate(01);
 		srDate.setMonth(0);
-		var srDateStr	=	srDate.toString();
-		return srDateStr;
+		if (toStr){ return srDate.toString();};
+		return srDate;
 	}
 	
 	var arr = [
