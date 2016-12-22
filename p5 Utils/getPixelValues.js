@@ -33,3 +33,25 @@ function _getAlpha(pixIndex){
 		return false;
 	}
 }
+
+// Check which channel a pixel is in, returns a string <r | g | b | a>
+function _getChannel(pixIndex){
+	if (pixIndex % 4 === 0){
+		return "r"
+	}
+	
+	if (pixIndex % 4 === 1){
+		return "g"
+	}
+	
+	if (pixIndex % 4 === 2){
+		return "b"
+	}
+	
+	if (pixIndex % 4 === 3){
+		return "a"
+	}
+	
+	// Did not match any of the above, is not a valid index or other issue occured
+	return false;
+}

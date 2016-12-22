@@ -21,4 +21,6 @@ Checks if a pixel at a particular index is part of a channel (rgba). Returns tha
 ######Example  : _getBlue(30); // Will return a value as pixel 30 is a pixel in the blue channel
 ######Example 2  : _getRed(30); // Will return false as pixel 30 is not in the red channel
 
+Also provides a _getChannel(*pixelInteger*) function which returns a string of 'r', 'g', 'b', or 'a' representing the channel that pixel belongs to.
+
 *(Examples above are based on test data, but should give you an idea how it works)*
