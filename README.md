@@ -12,6 +12,17 @@ You may pass a blank string as year if you wish to use this arg along with the c
 ######Example 2: calculateBankHolidays("", true);
 
 
+### calcInterest.js
+Allows you to calculate interest per year based upon an initial investment
+
+
+A second arg allows you to define if output should be in String format.
+You may pass a blank string as year if you wish to use this arg along with the current year (without hardcoding the year).
+
+######Usage: calcInterest(*intialInvestment, numYears, interestPerYear*);
+######Example  : calcInterest(500, 6, 1.05); // 5% interest over 6 years on a 500 initial investment
+
+
 ##p5 Utils
 ### getPixelValues.js
 Checks if a pixel at a particular index is part of a channel (rgba). Returns that pixel value (0-255) if it is, returns the value, else returns false.
